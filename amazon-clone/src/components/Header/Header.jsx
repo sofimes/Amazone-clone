@@ -6,6 +6,7 @@ import Amazon from "../Assets/images/amazon.png";
 import usa from "../Assets/images/USA.png";
 import classes from "./header.module.css";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
@@ -13,9 +14,9 @@ const Header = () => {
         <div className={classes.header_container}>
           <div className={classes.logo_container}>
             {/* logo */}
-            <a href="/">
+            <Link to="/">
               <img src={Amazon} alt="amazon_logo" />
-            </a>
+            </Link>
             {/* delivery */}
             <div className={classes.delivery}>
               <span>
@@ -35,26 +36,26 @@ const Header = () => {
             <BsSearch />
           </div>
           <div className={classes.order_container}>
-            <a href="/" className={classes.language}>
+            <Link to="/" className={classes.language}>
               <img src={usa} alt="" />
               <select>
                 <option value="">EN</option>
               </select>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/auth">
               <p>Hello,Sign In</p>
               <span>Account & Lists</span>
-            </a>
+            </Link>
             {/* Orders */}
-            <a href="/">
+            <Link to="/orders">
               <p>returns</p>
               <span>& Orders</span>
-            </a>
+            </Link>
             {/* cart */}
-            <a href="/" className={classes.cart}>
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
