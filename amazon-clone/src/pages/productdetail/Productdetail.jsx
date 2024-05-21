@@ -5,6 +5,7 @@ import axios from "axios";
 import { productUrl } from "../../API/Endpoints";
 import Productcard from "../../components/product/Productcard";
 import Loader from "../../components/Loader/Loader";
+import { CgLogIn } from "react-icons/cg";
 const Productdetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
@@ -24,7 +25,11 @@ const Productdetail = () => {
   }, []);
   return (
     <Layout>
-      {isLoading ? <Loader /> : <Productcard product={product} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Productcard product={product} flex={true} renderDesc={true} />
+      )}
     </Layout>
   );
 };
