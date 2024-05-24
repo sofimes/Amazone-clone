@@ -13,7 +13,13 @@ function Carousel1() {
         showIndicators={false}
       >
         {img.map((imageItemLink) => {
-          return <img src={imageItemLink} className={classes.one} />;
+          return (
+            <img
+              key={imageItemLink}
+              src={imageItemLink}
+              className={classes.one}
+            />
+          );
         })}
       </Carousel>
       <div className={classes.hero_img}></div>
