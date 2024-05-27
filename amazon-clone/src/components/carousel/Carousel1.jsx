@@ -10,7 +10,7 @@ function Carousel1() {
         autoPlay={true}
         infiniteLoop={true}
         showThumbs={false}
-        showIndicators={false}
+        showIndicators={true}
       >
         {img.map((imageItemLink) => {
           return (
