@@ -29,5 +29,5 @@ app.listen(5000, (err) => {
   if (err) {
     throw err;
   }
-  console.log("Amazone server running on port :5000 http://localhost:5000");
+  console.log("Amazon server running on port :5000 http://localhost:5000");
 });
